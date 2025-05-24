@@ -1,23 +1,19 @@
-#include<iostream>
+#include <iostream>
 #include<cmath>
 using namespace std;
-int main() {
-	int num, año, mes,dia;
-	cout << "ingrese un numero de 8 cifras con formato AAAAMMDD: ";
-	cin >> num;
-	if (num % 1 == 0)
-	{
-		año = num / 10000;
-		año = floor(año);
-		
-		mes = num / 100;
-		mes = floor(mes);
-		mes = mes - año * 10000;
-
-		dia = num - mes - año;
-		
-		cout << "el año es : " << año << "\n";
-		cout << "el mes es : " << mes << "\n";
-		cout << "el dia es : " << dia<<"\n";
-	}
+int main()
+{
+    int año, mes, dia,amd;
+    cout << "ingrese el año:";
+    cin >> año;
+    cout << "\n";
+    cout << "ingrese el mes: ";
+    cin >> mes;
+    cout << "\n";
+    cout << "ingrese el dia: ";
+    cin >> dia;
+    cout << "\n";
+    amd = año * 10000 + mes * 100 + dia;
+    cout << "en formato AAAAMMDD seria: " << amd <<"\n";
+    return 0;
 }

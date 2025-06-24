@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int cantidad;
+    float sueldo, suma = 0, max_sueldo=0 ;
+    double min_sueldo=999999999999;
+
+    cout << "Ingrese la cantidad de sueldos a ingresar: ";
+    cin >> cantidad;
+
+    for (int i = 1; i <= cantidad; i++) {
+        cout << "Ingrese el sueldo #" << i << ": ";
+        cin >> sueldo;
+
+        suma += sueldo;
+        
+
+        if (sueldo > max_sueldo)
+            max_sueldo= sueldo;
+
+        if (sueldo < min_sueldo)
+            min_sueldo = sueldo;
+    }
+
+    float promedio = suma / cantidad;
+
+    cout << "Suma de los sueldos: $" << suma << endl;
+    cout << "Promedio: $" << promedio << endl;
+    cout << "Sueldo maximo: $" << max_sueldo << endl;
+    cout << "Sueldo minimo: $" << min_sueldo << endl;
+    return 0;
+}
